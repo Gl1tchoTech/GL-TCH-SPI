@@ -1,5 +1,5 @@
-fastapi==0.118.0
-uvicorn[standard]==0.38.0
-ytmusicapi==1.11.1
-yt-dlp==2026.06.10
-python-multipart==0.0.20
+fastapi
+uvicorn[standard]
+ytmusicapi
+yt-dlp
+python-multipart
