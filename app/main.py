@@ -6,7 +6,8 @@ from app.routers import (
     artists,
     playlists,
     lyrics,
-    stream
+    stream,
+    song
 )
 
 app = FastAPI(
