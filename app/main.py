@@ -21,6 +21,18 @@ app.include_router(playlists.router)
 app.include_router(lyrics.router)
 app.include_router(stream.router)
 
+
 @app.get("/")
 def root():
-    return {"status": "online"}
+    return {
+        "name": "YouTube Music API",
+        "status": "online",
+        "version": "1.0.0"
+    }
+
+
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy"
+    }
