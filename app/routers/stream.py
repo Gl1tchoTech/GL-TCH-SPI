@@ -1,8 +1,19 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
+
 from app.services.ytdlp_service import get_stream
 
-router = APIRouter(tags=["Streaming"])
+router = APIRouter(
+    tags=["Streaming"]
+)
+
 
 @router.get("/stream/{video_id}")
 def stream(video_id: str):
-    return get_stream(video_id)
+    try:
+        return get_stream(video_id)
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to fetch stream: {str(e)}"
+        )
