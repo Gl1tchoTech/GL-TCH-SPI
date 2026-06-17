@@ -7,9 +7,9 @@ def get_stream(video_id: str):
     url = f"https://www.youtube.com/watch?v={video_id}"
     
     options = {
-        "quiet": False,
-        "noplaylist": True,
-        "format": "bestaudio/best",
+    "quiet": True,
+    "noplaylist": True,
+    "format": "bestaudio[ext=m4a]/bestaudio/best"
     }
     
     # Handle cookies from environment variable
