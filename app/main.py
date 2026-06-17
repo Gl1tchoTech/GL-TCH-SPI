@@ -8,7 +8,8 @@ from app.routers import (
     lyrics,
     stream,
     song,
-    download
+    download,
+    debug
 )
 
 app = FastAPI(
@@ -24,6 +25,7 @@ app.include_router(lyrics.router)
 app.include_router(stream.router)
 app.include_router(song.router)
 app.include_router(download.router)
+app.include_router(debug.router)
 
 @app.get("/")
 def root():
