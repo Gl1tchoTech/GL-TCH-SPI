@@ -9,7 +9,6 @@ def get_stream(video_id: str):
     options = {
     "quiet": True,
     "noplaylist": True,
-    "format": "bv*+ba/best"
     }
     
     # Handle cookies from environment variable
